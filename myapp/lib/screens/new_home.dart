@@ -4,6 +4,7 @@ import 'crop_prediction_screen.dart';
 import 'home_screen.dart';
 import 'price_screen.dart';
 import 'planting_screen.dart';
+// import 'tools_admin.dart';
 class NewHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -54,7 +55,7 @@ class NewHomeScreen extends StatelessWidget {
                         children: [
                           Icon(FontAwesomeIcons.eye, size: 50, color: Colors.white),
                           SizedBox(height: 10),
-                          Text('Crop Monitoring', style: TextStyle(color: Colors.white)),
+                          Text('Farmers Market', style: TextStyle(color: Colors.white)),
                         ],
                       ),
                     ),
@@ -112,6 +113,56 @@ class NewHomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CropPredictionScreen()),
+                      );
+                    },
+                    child: Card(
+                      color: Colors.greenAccent,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(FontAwesomeIcons.leaf, size: 50, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text('Add Tools', style: TextStyle(color: Colors.white)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CropPredictionScreen()),
+                      );
+                    },
+                    child: Card(
+                      color: Colors.blueAccent,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(FontAwesomeIcons.eye, size: 50, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text('Farmers Market', style: TextStyle(color: Colors.white)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
           Container(
             padding: EdgeInsets.all(20),
             child: Column(
